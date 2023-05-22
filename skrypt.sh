@@ -31,6 +31,8 @@ if [[ "$1" == "--help" || "$1" == "-h"]]; then
     echo "  --date lub -d: Wyświetla dzisiejszą datę."
     echo "  --logs [liczba] lub -l [liczba]: Tworzy pliki logx.txt, gdzie x to numer pliku od 1 do liczba (domyślnie 100)."
     echo "  --help lub -h: Wyświetla dostępne opcje."
+    echo "  --init: klonuje repozytorium"
+    echo "  --error: wyrzuca błąd gdzie x to numer pliku od 1 do 'num_files'"
 else
     echo "Nieznana opcja. Użyj --help lub -h, aby zobaczyć dostępne opcje."
 fi
