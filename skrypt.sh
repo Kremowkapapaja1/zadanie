@@ -50,3 +50,21 @@ if [[ "$1" == "--init" ]]; then
 else
     echo "Nieznana opcja. Użyj --help, aby zobaczyć dostępne opcje."
 fi
+
+if [[ "$1" == "--error" ]]; then
+    if [[ -n "$2" ]]; then
+        num_files=$2
+    else
+        num_files=100
+    fi
+    
+    for ((i=1; i<=$num_files; i++)); do
+        echo "Error file $i" > "errorx/error$i.txt"
+    done
+    
+    echo "$num_files error files have been created."
+else
+    echo "Unknown option. Use --help to see the available options."
+fi
+
+
