@@ -34,3 +34,19 @@ if [[ "$1" == "--help" || "$1" == "-h"]]; then
 else
     echo "Nieznana opcja. Użyj --help lub -h, aby zobaczyć dostępne opcje."
 fi
+
+if [[ "$1" == "--init" ]]; then
+    # Pobierz ścieżkę bieżącego katalogu
+    current_dir=$(pwd)
+    
+    # Klonuj repozytorium
+    git clone https://github.com/Kremowkapapaja1/zadanie.git "$current_dir/repozytorium"
+    
+    # Dodaj ścieżkę do zmiennej środowiskowej PATH
+    echo "export PATH=\"\$PATH:$current_dir/repozytorium\"" >> ~/.bashrc
+    source ~/.bashrc
+    
+    echo "Repozytorium zostało sklonowane, a ścieżka została dodana do zmiennej środowiskowej PATH."
+else
+    echo "Nieznana opcja. Użyj --help, aby zobaczyć dostępne opcje."
+fi
