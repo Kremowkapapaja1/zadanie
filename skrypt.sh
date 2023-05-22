@@ -1,2 +1,2 @@
 #!/bin/bash
-date
+echo "Dzisiejsza data: $(date)"
